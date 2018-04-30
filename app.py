@@ -7,14 +7,13 @@ app = Flask(__name__)
 def hello():
     return render_template('search-form.html')
 
-
 # @app.route('/<star>')
 # def hello_star(star):
 #     return "Hello {}!".format(star)
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    text = request.form['text']
+    text = request.form['target']
     processed_text = text.upper()
     return processed_text
 

@@ -1,13 +1,10 @@
-form {
-    width:500px;
-    margin:50px auto;
-}
-.search {
+/* forms and inputs */
+input[type=text] {
     padding:8px 15px;
-    background:rgba(50, 50, 50, 0.2);
+    background:rgba(50, 50, 50, 0.123);
     border:0px solid #dbdbdb;
 }
-.button {
+input[type=button] {
     position:relative;
     padding:6px 15px;
     left:-8px;
@@ -15,7 +12,7 @@ form {
     background-color:#207cca;
     color:#fafafa;
 }
-.button:hover  {
+input[type=button]:hover  {
     background-color:#fafafa;
     color:#207cca;
 }
