@@ -1,4 +1,15 @@
-<form method="POST">
-    <input name="text">
+<!-- <form method="POST">
+    <input name="target">
     <input type="submit">
+</form> -->
+
+<!doctype html>
+<title> - caniobserveit - </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+
+<center>
+<form method="POST">
+    <input name="target" type="text" placeholder="target...">
+    <input type="button" value="Search">
 </form>
+</center>
