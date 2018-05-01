@@ -1,10 +1,27 @@
 /* forms and inputs */
 input[type=text] {
+    font-size: 18pt;
     padding:8px 15px;
     background:rgba(50, 50, 50, 0.123);
     border:0px solid #dbdbdb;
 }
+
+input[type=date] {
+    font-size: 14pt;
+    padding:8px 15px;
+    background:rgba(50, 50, 50, 0.123);
+    border:0px solid #dbdbdb;
+}
+
+input[class=awesomplete] {
+    font-size: 14pt;
+    padding:8px 15px;
+    background:rgba(50, 50, 50, 0.123);
+    border:0px solid #dbdbdb;
+}
+
 input[type=button] {
+    font-size: 18pt;
     position:relative;
     padding:6px 15px;
     left:-8px;

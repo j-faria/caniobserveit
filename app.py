@@ -3,9 +3,15 @@ from flask import request, render_template
 
 app = Flask(__name__)
 
+
+import json
+obs = json.load(open('data/observatories.txt'))
+# obs = ','.join([o.lower() for o in obs])
+obs = ','.join([o[1]['name'] for o in obs.items()])
+
 @app.route('/')
 def hello():
-    return render_template('search-form.html')
+    return render_template('index.html', obs=obs)
 
 # @app.route('/<star>')
 # def hello_star(star):

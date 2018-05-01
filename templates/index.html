@@ -1,12 +1,9 @@
-<!-- <form method="POST">
-    <input name="target">
-    <input type="submit">
-</form> -->
-
 <!doctype html>
 <title> - caniobserveit - </title>
-<link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='structure.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='awesomplete/awesomplete.css') }}">
+<script src="{{ url_for('static', filename='awesomplete/awesomplete.js') }}" async></script>
 
 <div class="wrapper">
 
@@ -14,7 +11,7 @@
     <h2>what</h2>
     <form method="POST">
         <input name="target" type="text" placeholder="target..." required>
-        <input type="button" value="Go!">
+        <!-- <input type="button" value="Go!"> -->
     </form>
     </center>
 
@@ -26,17 +23,19 @@
         
         <div class="column">
             <h2>where</h2>
-            <form method="POST">
-                    <input name="target" type="text" placeholder="target..." required>
-                    <input type="button" value="Go!">
-            </form>
+            <input class="awesomplete"
+                data-list="{{ obs }}" />
         </div>
-        
+            
+        <div class="column">
+            <input type="button" value="Go!">
+        </div>
+
         <div class="column">
             <h2>when</h2>
             <form method="POST">
-                    <input name="target" type="text" placeholder="target..." required>
-                    <input type="button" value="Go!">
+                    <input id="date" type="date" placeholder="date..."/>
+                    <!-- <input name="target" type="text" placeholder="date..." required> -->
             </form>
         </div>
         
