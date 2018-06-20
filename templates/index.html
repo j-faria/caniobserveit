@@ -1,48 +1,33 @@
-<!doctype html>
-<title> - caniobserveit - </title>
-<link rel="stylesheet" href="{{ url_for('static', filename='structure.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='awesomplete/awesomplete.css') }}">
-<script src="{{ url_for('static', filename='awesomplete/awesomplete.js') }}" async></script>
+{% extends "template.html" %}
 
-<div class="wrapper">
+{% block body %}
 
-    <center>
+<form method="GET">
+  <center>
     <h2>what</h2>
-    <form method="POST">
-        <input name="target" type="text" placeholder="target..." required>
-        <!-- <input type="button" value="Go!"> -->
-    </form>
-    </center>
+    <input name="target" type="text" placeholder="target..." required>
+  </center>
 
-    <!-- <header>
-        <h1>3 Column Responsive Layout</h1>
-    </header> -->
-        
-    <section class="columns">
-        
-        <div class="column">
-            <h2>where</h2>
-            <input class="awesomplete"
-                data-list="{{ obs }}" />
-        </div>
-            
-        <div class="column">
-            <input type="button" value="Go!">
-        </div>
+  <section class="columns">
+    <div class="column">
+      <h2>where</h2>
+      <input name="observatory" class="awesomplete" data-list="{{ obs }}" />
+    </div>
 
-        <div class="column">
-            <h2>when</h2>
-            <form method="POST">
-                    <input id="date" type="date" placeholder="date..."/>
-                    <!-- <input name="target" type="text" placeholder="date..." required> -->
-            </form>
-        </div>
-        
-    </section>	
-        
-    <!-- <footer> 
+    <div class="column">
+      <button class="button" type="submit">Go</button>
+    </div>
+
+    <div class="column">
+      <h2>when</h2>
+      <input name="date" id="date" type="date" placeholder="date..." />
+    </div>
+</form>
+
+</section>
+
+<!-- <footer>
         <p>Created by João Faria</p>
     </footer> -->
-    
-</div>
+
+{% endblock %}
