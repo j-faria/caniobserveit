@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='structure.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='awesomplete/awesomplete.css') }}">
-<script src="{{ url_for('static', filename='awesomplete/awesomplete.js') }}" async></script>
+<script src="{{ url_for('static', filename='awesomplete/awesomplete.min.js') }}" async></script>
 
 <div class="wrapper">
 
@@ -18,15 +18,15 @@
     <!-- <header>
         <h1>3 Column Responsive Layout</h1>
     </header> -->
-        
+
     <section class="columns">
-        
+
         <div class="column">
             <h2>where</h2>
             <input class="awesomplete"
                 data-list="{{ obs }}" />
         </div>
-            
+
         <div class="column">
             <input type="button" value="Go!">
         </div>
@@ -38,11 +38,11 @@
                     <!-- <input name="target" type="text" placeholder="date..." required> -->
             </form>
         </div>
-        
-    </section>	
-        
-    <!-- <footer> 
+
+    </section>
+
+    <!-- <footer>
         <p>Created by João Faria</p>
     </footer> -->
-    
+
 </div>
