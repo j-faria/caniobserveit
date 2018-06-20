@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 import json
 obs = json.load(open('data/observatories.txt'))
-# obs = ','.join([o.lower() for o in obs])
 obs = ','.join([o[1]['name'] for o in obs.items()])
 
 @app.route('/')
@@ -17,10 +16,11 @@ def hello():
 # def hello_star(star):
 #     return "Hello {}!".format(star)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET', 'POST'])
 def my_form_post():
-    text = request.form['target']
-    processed_text = text.upper()
+    text = request.form
+    print(text)
+    processed_text = text['target'].upper()
     return processed_text
 
 
